@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector, connect } from "react-redux";
 import React from "react";
 import Searcher from "./components/Searcher";
 import Cards from "./components/Cards";
@@ -10,9 +10,10 @@ import "./App.css";
 
 function App() {
   const dogs = useSelector((state) => state.dogs);
+  const searchDogs = useSelector((state) => state.searchDogs);
   const loading = useSelector((state) => state.loading);
+  const filtering = useSelector((state) => state.filtering);
   const dispatch = useDispatch();
-  //const [dogs, setDogs] = useState([]);
 
   //Funcion que llama la api
   useEffect(() => {
@@ -23,13 +24,13 @@ function App() {
       dispatch(setLoading(false));
     };
     fetchDogs();
-  }, []);
+  }, [filtering]);
 
   return (
     <div>
       <div className="app">
-        <Searcher />
-        {loading ? <Loader /> : <Cards dogs={dogs} />}
+        <Searcher dogs={dogs} />
+        {loading ? <Loader /> : <Cards dogs={filtering ? searchDogs : dogs} />}
       </div>
     </div>
   );
