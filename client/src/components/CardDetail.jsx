@@ -28,7 +28,7 @@ const CardDetail = ({ dogDetails }) => {
         {temperament}
       </p>
       <p>
-        <span>Life_span: </span>
+        <span>Life span: </span>
         {life_span}
       </p>
     </div>
