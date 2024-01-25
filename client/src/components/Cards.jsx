@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import Card from "./Card";
 import Paginado from "./Paginated.jsx";
 import "../style/Cards.css";
@@ -18,16 +19,19 @@ const Cards = (props) => {
         {dogs
           .map(
             ({ id, name, image, temperament, weight, height, life_span }) => (
-              <Card
-                key={id}
-                id={id}
-                image={image.url}
-                name={name}
-                height={height.metric}
-                weight={weight.metric}
-                temperaments={temperament}
-                life_span={life_span}
-              />
+              <NavLink key={id} to={`/detail/${name}`}>
+                <Card
+                  key={id}
+                  id={id}
+                  s
+                  image={image.url}
+                  name={name}
+                  height={height.metric}
+                  weight={weight.metric}
+                  temperaments={temperament}
+                  life_span={life_span}
+                />
+              </NavLink>
             )
           )
           .slice(firstIndex, lastIndex)}
