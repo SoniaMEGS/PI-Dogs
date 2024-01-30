@@ -15,7 +15,6 @@ const NavBar = () => {
           <NavLink to="/form">Create dog</NavLink>
         </li>
       </ul>
-      {pathname === "/home" && <Searcher />}
     </nav>
   );
 };

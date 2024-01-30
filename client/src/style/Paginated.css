@@ -9,6 +9,49 @@
   justify-content: space-evenly;
 }
 .paginated_list li {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 0.35rem;
+  margin-right: 0.35rem;
+}
+
+.paginated_list-num,
+.paginated_prev,
+.paginated_next {
+  width: 4rem;
+  height: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid #ffffff;
+  color: #ffce2b;
+  font-weight: 600;
+  font-size: small;
+  border-radius: 0.5rem;
+}
+.paginated_list-num--active {
+  color: #ff9696;
+  width: 4rem;
+  height: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid #ff6868;
+  font-weight: 600;
+  font-size: small;
+  border-radius: 0.5rem;
+}
+.paginated_prev,
+.paginated_next {
+  width: 8rem;
+  height: 2.5rem;
+}
+.paginated_list-num:focus,
+.paginated_prev:focus,
+.paginated_next:focus {
+  border-color: #ff6868;
+  color: #ff9696;
+  cursor: pointer;
+}
+
+.paginated_list-num:hover,
+.paginated_prev:hover,
+.paginated_next:hover {
+  border-color: #ff6868;
+  color: #ff9696;
+  cursor: pointer;
 }

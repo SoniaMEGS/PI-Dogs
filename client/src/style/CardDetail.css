@@ -1,0 +1,38 @@
+.cardDetail {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.cardDetailContainer {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 0.1rem solid #fcdd78;
+  border-radius: 0.5rem;
+}
+.cardDetailContainer_img {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.cardDetailContainer_img-dogs {
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+.cardDetailContainer_p {
+  width: 100%;
+}
+.cardDetailContainer_p-text {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  color: black;
+  font-size: 2rem;
+}
+.cardDetailContainer_p-text span {
+  font-weight: 600;
+}

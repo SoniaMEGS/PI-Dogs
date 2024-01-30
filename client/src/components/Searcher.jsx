@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setSearchDog, setFiltering } from "../redux/actions/actions.js";
+import "../style/Searcher.css";
 
 const Searcher = () => {
-  // Obtiene el estado 'dogs' del almacenamiento Redux
   const dogs = useSelector((state) => state.dogs);
   const dispatch = useDispatch();
-  // Declara un estado local
   const [inputValue, setInputValue] = useState("");
 
   // Declara una función que se ejecuta cuando cambia el valor del input.
   const handleInputChange = (event) => {
-    // Obtiene el valor del input del evento.
     const { value } = event.target;
     setInputValue(value);
   };
@@ -21,7 +19,6 @@ const Searcher = () => {
     const filterByName = dogs.filter((dg) => {
       return dg.name.toLowerCase().includes(inputValue.toLowerCase());
     });
-    // Envía una acción Redux para actualizar el estado de búsqueda con los perros filtrados.
     dispatch(setSearchDog(filterByName));
   };
 
@@ -37,7 +34,11 @@ const Searcher = () => {
 
   return (
     <div>
-      <input onChange={handleInputChange} placeholder="Search dogs" />
+      <input
+        onChange={handleInputChange}
+        placeholder="Search dogs..."
+        className="searcher"
+      />
     </div>
   );
 };

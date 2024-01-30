@@ -5,31 +5,31 @@ function validation({ name, height, weight, lifeSpan }) {
   const regexLifeSpan = /^\d+\s-\s\d+\syears$/;
   if (!regexName.test(name)) {
     errors.name =
-      "Debe iniciar con mayuscula, no se permiten caracteres especiales o numeros.";
+      "It must start with a capital letter, no special characters or numbers are allowed.";
   }
   //--
   if (!regexParameters.test(height)) {
-    errors.height = "Debe tener la siguiente estructura: numero - numero.";
+    errors.height = "It must have the following structure: number - number.";
   }
   let heightArray = height.split(" ");
   if (heightArray[0] > heightArray[2] || heightArray[0] == heightArray[2]) {
     errors.height =
-      "El primer parametro de altura debe ser menor y diferente al segundo.";
+      "The first height parameter must be smaller and different than the second.";
   }
   //--
   if (!regexParameters.test(weight)) {
-    errors.weight = "Debe tener la siguiente estructura: numero - numero.";
+    errors.weight = "It must have the following structure: number - number.";
   }
   let weightArray = weight.split(" ");
   //console.log(weightArray);
   if (weightArray[0] > weightArray[2] || weightArray[0] == weightArray[2]) {
     errors.weight =
-      "El primer parametro de peso debe ser menor y diferente al segundo.";
+      "The first weight parameter must be smaller and different than the second.";
   }
   //--
   if (!regexLifeSpan.test(lifeSpan)) {
     errors.lifeSpan =
-      "Debe tener la siguiente estructura: numero - numero years.";
+      "It must have the following structure: number - number years.";
   }
   let lifeSpanArray = lifeSpan.split(" ");
 
@@ -38,7 +38,7 @@ function validation({ name, height, weight, lifeSpan }) {
     lifeSpanArray[0] == parseInt(lifeSpanArray[2])
   ) {
     errors.lifeSpan =
-      "El primer parametro de esperanza de vida debe ser menor y diferente al segundo.";
+      "The first life span parameter must be lower and different from the second.";
   }
   return errors;
 }

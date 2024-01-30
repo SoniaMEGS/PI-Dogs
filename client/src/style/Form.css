@@ -1,26 +1,103 @@
+.container {
+  display: flex;
+  align-content: center;
+  height: 90%;
+}
 .newDogForm {
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
-  margin-left: 8rem;
-  margin-right: 8rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 0.1rem solid #fcdd78;
+  border-radius: 0.5rem;
+}
+.newDogForm_title {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.newDogForm_title h2 {
+  padding-top: 2rem;
+  color: #e5b518;
+}
+.newDogForm_title img {
+  width: 4rem;
+  margin-left: 2rem;
+}
+.newDogForm_label {
+  display: flex;
 }
 .newDogForm > * {
   margin-top: 1rem;
 }
+
+.newDogForm_label-name,
+.newDogForm_label-height,
+.newDogForm_label-weight,
+.newDogForm_label-lifeSpan,
+.newDogForm_label-temperament {
+  width: 8.17rem;
+  margin-right: 1.2rem;
+  font-weight: 600;
+  display: flex;
+}
 .newDogForm_temperament {
   display: flex;
 }
-.newDogForm_temperament > * {
+.newDogForm_temperament {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   gap: 1rem;
   margin-top: 1.2rem;
   margin-left: 1.2rem;
 }
 .newDogForm_temperament span {
   display: flex;
+  margin-top: 0rem;
+  margin-left: 0rem;
+}
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3rem;
 }
 .newDogForm_button {
   width: 15rem;
+  height: 3rem;
+  background-image: linear-gradient(to right, #c5ff87, #fcdd78);
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: medium;
+  border-radius: 0.375rem;
+  transition-property: border-color, background-color;
+  transition-duration: 0.3s;
+}
+.newDogForm_button:disabled {
+  background-image: linear-gradient(to right, #b5b5b5, #747474);
+  color: #c8c8c8;
+}
+.errorMessage {
+  color: #ff6868;
+}
+.newDogForm_label-input {
+  height: 2.4rem;
+  backdrop-filter: blur(4px);
+  background-color: #c5ff872e;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.6rem;
+  outline: none;
+  border-width: 2px;
+  border-color: #ffffff;
+  transition-property: border-color, background-color;
+  transition-duration: 0.3s;
+}
+.newDogForm_label-input:hover {
+  border-color: #fcdd78;
 }

@@ -4,21 +4,23 @@ import "../style/Card.css";
 const Card = (props) => {
   const { id, name, image, temperaments, weight } = props;
   return (
-    <div id={id} className="cardContainer">
-      <img src={image} alt="Not Found" />
-      <p>
+    <article id={id} className="cardContainer">
+      <div className="cardContainer_img">
+        <img src={image} alt="Not Found" className="cardContainer_img-dogs" />
+      </div>
+      <p className="cardContainer_text">
         <span>Name: </span>
         {name}
       </p>
-      <p>
-        <span>Temperaments: </span>
-        {temperaments}
-      </p>
-      <p>
+      <p className="cardContainer_text">
         <span>Weight (kg): </span>
         {weight}
       </p>
-    </div>
+      <p className="cardContainer_text">
+        <span>Temperaments: </span>
+        {temperaments}
+      </p>
+    </article>
   );
 };
 

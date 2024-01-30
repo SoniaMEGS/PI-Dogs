@@ -1,4 +1,10 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+.app {
+  height: 100vh;
+  background-image: linear-gradient(to right, #feebaf, #defdbd);
+  overflow-y: auto;
+}
+.searcherFilter {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
 }

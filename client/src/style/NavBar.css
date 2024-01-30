@@ -3,9 +3,34 @@
   justify-content: space-evenly;
   padding: 2rem;
   width: 100vw;
+  border: 1px solid #fcdd78;
+  padding: 1.5rem;
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 .navBar_list {
   display: flex;
   justify-content: space-evenly;
   width: 100vw;
+}
+.navBar_list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12rem;
+  height: 4rem;
+  background-image: linear-gradient(to right, #c5ff87, #fcdd78);
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: medium;
+  border-radius: 1rem;
+  transition-property: border-color, background-color;
+  transition-duration: 0.3s;
+}
+.navBar_list li:hover {
+  border-color: #ff6868;
+}
+.navBar_list li a {
+  color: rgb(255, 255, 255);
 }

@@ -1,4 +1,10 @@
-import { SET_DOGS, SET_LOADING, SET_SEARCHDOG, SET_FILTERING } from "./types";
+import {
+  SET_DOGS,
+  SET_LOADING,
+  SET_SEARCHDOG,
+  SET_FILTERING,
+  SET_SORTING,
+} from "./types";
 
 export const setDogs = (payload) => ({
   type: SET_DOGS,
@@ -15,5 +21,10 @@ export const setSearchDog = (payload) => ({
 
 export const setFiltering = (payload) => ({
   type: SET_FILTERING,
+  payload,
+});
+
+export const setSorting = (payload) => ({
+  type: SET_SORTING,
   payload,
 });
