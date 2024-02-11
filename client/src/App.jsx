@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import { DogDetails, Form, Landing, Home } from "./pages";
+import { DogDetails, Form, Landing, Home } from "./pages/index.js";
 import NavBar from "./components/NavBar.jsx";
 import "./App.css";
 

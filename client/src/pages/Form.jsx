@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import validation from "../components/validatios";
+import validation from "../components/validatios.js";
 import useTemperaments from "../hooks/useTemperaments.js";
 import { setSearchDog, setLoading } from "../redux/actions/actions.js";
 import "../style/Form.css";

@@ -6,7 +6,7 @@ import { setDogs, setLoading } from "../redux/actions/actions.js";
 import Loader from "../components/Loader.jsx";
 import Searcher from "../components/Searcher.jsx";
 import Filter from "../components/Filter.jsx";
-import Cards from "../components/Cards";
+import Cards from "../components/Cards.jsx";
 
 const Home = () => {
   const dogs = useSelector((state) => state.dogs);

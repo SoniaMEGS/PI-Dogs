@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 //   orderCardsByName,
 // } from "../redux/actions/actions.js";
 
-import Card from "./Card";
+import Card from "./Card.jsx";
 import Paginado from "./Paginated.jsx";
 import "../style/Cards.css";
 
